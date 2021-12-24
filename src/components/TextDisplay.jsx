@@ -1,13 +1,13 @@
 import React from "react";
 
-const Microphone = () => {
+const TextDisplay = () => {
   return (
     <>
       <div>
-        <h1>This is Microphone Component.</h1>
+        <h1>This is TextDisplay Component.</h1>
       </div>
     </>
   );
 };
 
-export default Microphone;
+export default TextDisplay;
