@@ -1,13 +1,13 @@
 import React from "react";
 
-const TextDisplay = () => {
+const ThemeSwitcher = () => {
   return (
     <>
       <div>
-        <h1>This is TextDisplay Component.</h1>
+        <h1>This is ThemeSwitcher Component.</h1>
       </div>
     </>
   );
 };
 
-export default TextDisplay;
+export default ThemeSwitcher;
