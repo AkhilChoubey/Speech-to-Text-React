@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { BsMicFill } from "react-icons/bs";
 import { BsMicMuteFill } from "react-icons/bs";
 const Microphone = () => {
-  const [checkPlayBtn, setCheckPlayButton] = useState("play");
+  const [checkPlayBtn, setCheckPlayButton] = useState("paused");
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (checkPlayBtn === "play") {
-      setCheckPlayButton("paused");
-    } else {
+    if (checkPlayBtn === "paused") {
       setCheckPlayButton("play");
+    } else {
+      setCheckPlayButton("paused");
     }
   };
 
@@ -17,7 +17,7 @@ const Microphone = () => {
     <>
       <div>
         <h1>This is Microphone Component.</h1>
-        <div onClick={handleClick}>
+        <div onClick={handleClick} style={{ cursor: "pointer" }}>
           {checkPlayBtn === "play" ? <BsMicFill /> : <BsMicMuteFill />}
         </div>
         {checkPlayBtn === "play" ? (
