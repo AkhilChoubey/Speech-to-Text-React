@@ -20,6 +20,11 @@ const Microphone = () => {
         <div onClick={handleClick}>
           {checkPlayBtn === "play" ? <BsMicFill /> : <BsMicMuteFill />}
         </div>
+        {checkPlayBtn === "play" ? (
+          <p>We are Listening!</p>
+        ) : (
+          <p>Click to Begin!</p>
+        )}
       </div>
     </>
   );
