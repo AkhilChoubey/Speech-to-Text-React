@@ -14,12 +14,6 @@ const TextDisplay = () => {
         {transcript && (
           <div className="microphone-result-container">
             <div className="microphone-result-text">{transcript}</div>
-            <button
-              className="microphone-reset btn"
-              onClick={Microphone.handleReset}
-            >
-              Reset
-            </button>
           </div>
         )}
       </div>

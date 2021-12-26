@@ -88,6 +88,9 @@ const Microphone = () => {
         ) : (
           <p>Click to Begin!</p>
         )}
+        <button className="microphone-reset btn" onClick={handleReset}>
+          Reset
+        </button>
       </div>
     </>
   );
