@@ -60,10 +60,10 @@ const Microphone = () => {
           {checkPlayBtn === "play" ? (
             <BsMicFill
               style={{
-                width: "53%",
-                height: "16rem",
+                width: "92%",
+                height: "6rem",
                 color: "green",
-                padding: "5%",
+                padding: "4%",
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
               }}
@@ -72,10 +72,10 @@ const Microphone = () => {
           ) : (
             <BsMicMuteFill
               style={{
-                width: "53%",
-                height: "16rem",
+                width: "92%",
+                height: "6rem",
                 color: "red",
-                padding: "5%",
+                padding: "4%",
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
               }}

@@ -28,7 +28,7 @@ const commands = [
   {
     command: "reset background colour",
     callback: () => {
-      document.body.style.background = `rgba(0, 0, 0, 0.8)`;
+      document.body.style.background = `white`;
     },
   },
 ];

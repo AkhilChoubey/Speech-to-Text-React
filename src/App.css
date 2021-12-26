@@ -45,12 +45,14 @@
 }
 .microphone-result-text {
   margin-bottom: 30px;
-  width: 70vw;
+  width: 65vw;
   overflow-y: auto;
+  text-align: justify;
+  margin-right: 5%;
 }
 .microphone-reset {
-  border: 1px solid #fff;
+  border: 1px solid rgb(248, 5, 5);
   background: none;
-  color: white;
+  color: rgb(248, 8, 8);
   width: fit-content;
 }
