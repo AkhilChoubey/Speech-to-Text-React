@@ -36,6 +36,17 @@ const Microphone = () => {
     }
   };
 
+  const stopHandle = () => {
+    setCheckPlayButton(false);
+    microphoneRef.current.classList.remove("listening");
+    SpeechRecognition.stopListening();
+  };
+
+  const handleReset = () => {
+    stopHandle();
+    resetTranscript();
+  };
+
   return (
     <>
       <div>

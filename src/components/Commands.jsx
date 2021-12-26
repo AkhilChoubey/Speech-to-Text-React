@@ -1,3 +1,10 @@
+import Microphone from "./Microphone";
+
+// const handleReset = () => {
+//   stopHandle();
+//   resetTranscript();
+// };
+
 const commands = [
   {
     command: "open *",
@@ -14,7 +21,7 @@ const commands = [
   {
     command: "reset",
     callback: () => {
-      handleReset();
+      Microphone.handleReset();
     },
   },
   ,
