@@ -53,6 +53,7 @@ const Microphone = () => {
         <h1>This is Microphone Component.</h1>
         <div
           className="microphone-icon-container"
+          ref={microphoneRef}
           onClick={handleClick}
           style={{ cursor: "pointer" }}
         >
@@ -83,7 +84,7 @@ const Microphone = () => {
           )}
         </div>
         {checkPlayBtn === "play" ? (
-          <p>We are Listening!</p>
+          <p> Listening....</p>
         ) : (
           <p>Click to Begin!</p>
         )}

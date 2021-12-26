@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 
-.microphone-icon-container::before {
+.microphone-icon-container.listening::before {
   content: "";
   width: 100px;
   height: 100px;
