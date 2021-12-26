@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { BsMicFill } from "react-icons/bs";
 import { BsMicMuteFill } from "react-icons/bs";
+import commands from "./Commands";
+
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
