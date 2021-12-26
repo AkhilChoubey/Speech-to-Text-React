@@ -18,7 +18,7 @@ const Microphone = () => {
       <div>
         <h1>This is Microphone Component.</h1>
         <div
-          className="microphone"
+          className="microphone-icon-container"
           onClick={handleClick}
           style={{ cursor: "pointer" }}
         >
