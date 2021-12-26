@@ -17,7 +17,11 @@ const Microphone = () => {
     <>
       <div>
         <h1>This is Microphone Component.</h1>
-        <div onClick={handleClick} style={{ cursor: "pointer" }}>
+        <div
+          className="microphone"
+          onClick={handleClick}
+          style={{ cursor: "pointer" }}
+        >
           {checkPlayBtn === "play" ? (
             <BsMicFill
               style={{
@@ -28,6 +32,7 @@ const Microphone = () => {
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
               }}
+              title="mute"
             />
           ) : (
             <BsMicMuteFill
@@ -39,6 +44,7 @@ const Microphone = () => {
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
               }}
+              title="unmute"
             />
           )}
         </div>
