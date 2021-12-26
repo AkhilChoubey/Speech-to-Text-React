@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsMicFill } from "react-icons/bs";
 import { BsMicMuteFill } from "react-icons/bs";
 const Microphone = () => {
   const [checkPlayBtn, setCheckPlayButton] = useState("paused");
+
+  const microphoneRef = useRef(null);
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+    return (
+      <div className="mircophone-container">
+        Browser is not Support Speech Recognition.
+      </div>
+    );
+  }
 
   const handleClick = (e) => {
     e.preventDefault();
