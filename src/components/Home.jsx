@@ -7,10 +7,11 @@ const Home = () => {
   return (
     <>
       <div>
-        <h1>This is Home Component.</h1>
         <ThemeSwitcher />
-        <Microphone />
-        <TextDisplay />
+        <div style={{ display: "flex" }}>
+          <Microphone />
+          <TextDisplay />
+        </div>
       </div>
     </>
   );
