@@ -9,7 +9,7 @@ const commands = [
   {
     command: "open *",
     callback: (website) => {
-      window.open("http://" + website.split(" ").join(""));
+      window.open("https://" + website.split(" ").join(""));
     },
   },
   {

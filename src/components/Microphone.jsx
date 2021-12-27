@@ -50,7 +50,6 @@ const Microphone = () => {
   return (
     <>
       <div>
-        <h1>This is Microphone Component.</h1>
         <div
           className="microphone-icon-container"
           ref={microphoneRef}
@@ -66,6 +65,7 @@ const Microphone = () => {
                 padding: "4%",
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
+                zIndex: 100000,
               }}
               title="mute"
             />
