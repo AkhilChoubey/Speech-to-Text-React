@@ -1,9 +1,8 @@
 import Microphone from "./Microphone";
 
-// const handleReset = () => {
-//   stopHandle();
-//   resetTranscript();
-// };
+const handleReset = () => {
+  localStorage.setItem("reset", "true");
+};
 
 const commands = [
   {
@@ -21,7 +20,7 @@ const commands = [
   {
     command: "reset",
     callback: () => {
-      Microphone.handleReset();
+      handleReset();
     },
   },
   ,

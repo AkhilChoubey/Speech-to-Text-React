@@ -9,7 +9,7 @@ const TextDisplay = () => {
 
   return (
     <>
-      <div>
+      <div className="text-display-container">
         <h1>This is TextDisplay Component.</h1>
         {transcript && (
           <div className="microphone-result-container">

@@ -49,7 +49,7 @@ const Microphone = () => {
 
   return (
     <>
-      <div>
+      <div className="microphone-root-container">
         <div
           className="microphone-icon-container"
           ref={microphoneRef}
@@ -57,30 +57,42 @@ const Microphone = () => {
           style={{ cursor: "pointer" }}
         >
           {checkPlayBtn === "play" ? (
-            <BsMicFill
+            <div
               style={{
-                width: "92%",
-                height: "6rem",
+                width: "100%",
+                height: "100%",
                 color: "green",
-                padding: "4%",
+                textAlign: "center",
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
                 zIndex: 100000,
               }}
               title="mute"
-            />
+            >
+              <BsMicFill
+                style={{ width: "80%", height: "80%", marginTop: "8%" }}
+              />
+            </div>
           ) : (
-            <BsMicMuteFill
+            <div
               style={{
-                width: "92%",
-                height: "6rem",
+                width: "100%",
+                height: "100%",
                 color: "red",
-                padding: "4%",
+                textAlign: "center",
                 borderRadius: "50%",
                 backgroundColor: "#eeeeee",
               }}
-              title="unmute"
-            />
+            >
+              <BsMicMuteFill
+                style={{
+                  width: "80%",
+                  height: "80%",
+                  marginTop: "8%",
+                }}
+                title="unmute"
+              />
+            </div>
           )}
         </div>
         {checkPlayBtn === "play" ? (

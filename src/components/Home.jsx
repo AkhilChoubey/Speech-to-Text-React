@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div>
         <ThemeSwitcher />
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
           <Microphone />
           <TextDisplay />
         </div>
