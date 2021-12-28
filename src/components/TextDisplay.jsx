@@ -26,6 +26,11 @@ const TextDisplay = () => {
       // }
     });
   }, []);
+
+  const handleReset = () => {
+    resetTranscript();
+  };
+
   return (
     <>
       <div className="text-display-container">
@@ -34,6 +39,11 @@ const TextDisplay = () => {
           <div className="microphone-result-container">
             <div className="microphone-result-text">{transcript}</div>
           </div>
+        )}
+        {transcript && (
+          <button className="microphone-reset btn" onClick={handleReset}>
+            Reset
+          </button>
         )}
       </div>
     </>
