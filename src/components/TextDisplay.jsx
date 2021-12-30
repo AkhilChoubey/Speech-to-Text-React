@@ -33,13 +33,26 @@ const TextDisplay = () => {
 
   return (
     <>
-      <div className="text-display-container">
-        <h1>This is TextDisplay Component.</h1>
-        {transcript && (
-          <div className="microphone-result-container">
-            <div className="microphone-result-text">{transcript}</div>
-          </div>
-        )}
+      <div style={{ minWidth: "62%", maxWidth: "62%" }}>
+        <div className="text-display-container">
+          {!transcript && (
+            <h1
+              style={{
+                textAlign: "center",
+                color: "#80808061",
+                marginTop: "18%",
+                fontSize: "3rem",
+              }}
+            >
+              Your Text Will Appear Here.
+            </h1>
+          )}
+          {transcript && (
+            <div className="microphone-result-container">
+              <div className="microphone-result-text">{transcript}</div>
+            </div>
+          )}
+        </div>
         {transcript && (
           <button className="microphone-reset btn" onClick={handleReset}>
             Reset
