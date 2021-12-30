@@ -1,5 +1,3 @@
-const handleReset = () => {};
-
 const commands = [
   {
     command: "open *",
