@@ -16,16 +16,6 @@ const TextDisplay = () => {
 
   const { transcript, resetTranscript } = useSpeechRecognition({ commands });
 
-  //     // if (localStorage.getItem("reset") === "true") {
-  //     //   resetTranscript();
-  //     //   localStorage.setItem("reset", "false");
-  //     //   updateReset(localStorage.getItem("reset").toString());
-  //     // } else {
-  //     //   updateReset(localStorage.getItem("reset").toString());
-  //     // }
-  //   });
-  // }, []);
-
   const handleReset = () => {
     resetTranscript();
   };
