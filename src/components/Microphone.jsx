@@ -42,10 +42,10 @@ const Microphone = () => {
     SpeechRecognition.stopListening();
   };
 
-  const handleReset = () => {
-    stopHandle();
-    resetTranscript();
-  };
+  // const handleReset = () => {
+  //   stopHandle();
+  //   resetTranscript();
+  // };
 
   return (
     <>
