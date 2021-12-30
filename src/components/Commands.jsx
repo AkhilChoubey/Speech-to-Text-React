@@ -13,13 +13,7 @@ const commands = [
       document.body.style.background = color;
     },
   },
-  {
-    command: "reset",
-    callback: () => {
-      localStorage.setItem("reset", "true");
-    },
-  },
-  ,
+
   {
     command: "reset background colour",
     callback: () => {

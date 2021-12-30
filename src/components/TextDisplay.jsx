@@ -5,27 +5,36 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 const TextDisplay = () => {
-  const { transcript, resetTranscript } = useSpeechRecognition();
+  const commands = [
+    {
+      command: "reset text area",
+      callback: () => {
+        resetTranscript();
+      },
+    },
+  ];
 
-  const [checkReset, updateReset] = useState(
-    localStorage.getItem("reset").toString()
-  );
+  const { transcript, resetTranscript } = useSpeechRecognition({ commands });
 
-  useEffect(() => {
-    window.addEventListener("storage", () => {
-      resetTranscript();
-      localStorage.setItem("reset", "false");
-      updateReset(localStorage.getItem("reset").toString());
+  // const [checkReset, updateReset] = useState(
+  //   localStorage.getItem("reset").toString()
+  // );
 
-      // if (localStorage.getItem("reset") === "true") {
-      //   resetTranscript();
-      //   localStorage.setItem("reset", "false");
-      //   updateReset(localStorage.getItem("reset").toString());
-      // } else {
-      //   updateReset(localStorage.getItem("reset").toString());
-      // }
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("storage", () => {
+  //     resetTranscript();
+  //     localStorage.setItem("reset", "false");
+  //     updateReset(localStorage.getItem("reset").toString());
+
+  //     // if (localStorage.getItem("reset") === "true") {
+  //     //   resetTranscript();
+  //     //   localStorage.setItem("reset", "false");
+  //     //   updateReset(localStorage.getItem("reset").toString());
+  //     // } else {
+  //     //   updateReset(localStorage.getItem("reset").toString());
+  //     // }
+  //   });
+  // }, []);
 
   const handleReset = () => {
     resetTranscript();
@@ -54,7 +63,11 @@ const TextDisplay = () => {
           )}
         </div>
         {transcript && (
-          <button className="microphone-reset btn" onClick={handleReset}>
+          <button
+            title="Reset text area"
+            className="microphone-reset btn"
+            onClick={handleReset}
+          >
             Reset
           </button>
         )}

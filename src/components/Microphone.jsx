@@ -96,9 +96,18 @@ const Microphone = () => {
           )}
         </div>
         {checkPlayBtn === "play" ? (
-          <p> Listening....</p>
+          <p style={{ margin: 0, fontSize: "3rem", textAlign: "center" }}>
+            {" "}
+            Listening....
+          </p>
         ) : (
-          <p>Click to Begin!</p>
+          <p style={{ margin: 0, fontSize: "3rem", textAlign: "center" }}>
+            Click{" "}
+            <span style={{ fontSize: "2.5rem" }}>
+              <BsMicMuteFill />
+            </span>{" "}
+            to Start
+          </p>
         )}
       </div>
     </>
