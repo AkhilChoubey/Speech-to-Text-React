@@ -64,12 +64,8 @@
   overflow-y: auto;
   text-align: justify;
 }
-.microphone-reset {
-  border: 1px solid rgb(248, 5, 5);
-  background: none;
-  color: rgb(248, 8, 8);
 
-  margin-top: 1%;
+.btn {
   width: 7rem;
   height: 3rem;
   border-radius: 6px;
@@ -80,4 +76,23 @@
 .button-container {
   display: flex;
   justify-content: space-between;
+}
+
+.microphone-reset {
+  border: 1px solid rgb(248, 5, 5);
+  background: none;
+  color: rgb(248, 8, 8);
+  margin-top: 1%;
+}
+
+.microphone-copy {
+  border: 1px solid rgb(248, 5, 5);
+  background: none;
+  color: rgb(248, 8, 8);
+  margin-right: 2%;
+}
+.microphone-download {
+  border: 1px solid rgb(248, 5, 5);
+  background: none;
+  color: rgb(248, 8, 8);
 }

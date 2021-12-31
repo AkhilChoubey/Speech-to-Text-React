@@ -44,7 +44,7 @@ const TextDisplay = () => {
         </div>
 
         {transcript && (
-          <div className="button-container" style={{ display: "flex" }}>
+          <div className="button-container">
             <button
               title="Reset text area"
               className="microphone-reset btn"
@@ -52,17 +52,23 @@ const TextDisplay = () => {
             >
               Reset
             </button>
-            <div style={{ marginTop: "1%" }}>
+            <div
+              style={{
+                marginTop: "1%",
+                width: "30.5%",
+                justifyContent: "space-between",
+              }}
+            >
               <button
-                title="Reset text area"
-                className="microphone-reset btn"
+                title="Copy text area"
+                className="microphone-copy btn"
                 onClick={handleReset}
               >
                 Copy
               </button>
               <button
-                title="Reset text area"
-                className="microphone-reset btn"
+                title="Download text area"
+                className="microphone-download btn"
                 onClick={handleReset}
               >
                 Download
