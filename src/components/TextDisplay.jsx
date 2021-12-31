@@ -44,7 +44,7 @@ const TextDisplay = () => {
         </div>
 
         {transcript && (
-          <div style={{ display: "flex" }}>
+          <div className="button-container" style={{ display: "flex" }}>
             <button
               title="Reset text area"
               className="microphone-reset btn"
