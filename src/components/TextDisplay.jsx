@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Microphone from "./Microphone";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
+import { useSpeechRecognition } from "react-speech-recognition";
+import { GrPowerReset } from "react-icons/gr";
+import { FaCopy } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
+import { MdFileCopy } from "react-icons/md";
+import { BiReset } from "react-icons/bi";
+import { VscDebugRestart } from "react-icons/vsc";
 
 const TextDisplay = () => {
   const commands = [
@@ -50,28 +54,28 @@ const TextDisplay = () => {
               className="microphone-reset btn"
               onClick={handleReset}
             >
-              Reset
+              <VscDebugRestart /> Reset
             </button>
             <div
               style={{
                 marginTop: "1%",
-                width: "30.5%",
+                width: "34.5%",
                 justifyContent: "space-between",
               }}
             >
               <button
-                title="Copy text area"
+                title="Copy Text"
                 className="microphone-copy btn"
                 onClick={handleReset}
               >
-                Copy
+                <MdFileCopy /> Copy
               </button>
               <button
-                title="Download text area"
+                title="Download as .txt file"
                 className="microphone-download btn"
                 onClick={handleReset}
               >
-                Download
+                <IoMdDownload /> Download
               </button>
             </div>
           </div>

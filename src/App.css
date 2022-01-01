@@ -1,3 +1,8 @@
+.root-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .microphone-root-container {
   width: 28%;
 }
@@ -86,13 +91,20 @@
 }
 
 .microphone-copy {
-  border: 1px solid rgb(248, 5, 5);
+  border: 1px solid rgb(5 46 248);
   background: none;
-  color: rgb(248, 8, 8);
+  color: rgb(5 46 248);
   margin-right: 2%;
 }
 .microphone-download {
-  border: 1px solid rgb(248, 5, 5);
+  width: 8rem;
+  border: 1px solid rgb(53 191 18);
   background: none;
-  color: rgb(248, 8, 8);
+  color: rgb(53 191 18);
+}
+
+@media (max-width: 450px) {
+  .root-container {
+    display: block;
+  }
 }
