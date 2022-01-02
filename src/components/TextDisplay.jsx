@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import Microphone from "./Microphone";
 import { useSpeechRecognition } from "react-speech-recognition";
 import { GrPowerReset } from "react-icons/gr";
@@ -7,8 +8,14 @@ import { IoMdDownload } from "react-icons/io";
 import { MdFileCopy } from "react-icons/md";
 import { BiReset } from "react-icons/bi";
 import { VscDebugRestart } from "react-icons/vsc";
+import { GiCheckMark } from "react-icons/gi";
 
 const TextDisplay = () => {
+  const [copyToClipboard, setCopyToClipboard] = useState({
+    value: "",
+    copied: false,
+  });
+
   const commands = [
     {
       command: "reset text area",
@@ -42,7 +49,15 @@ const TextDisplay = () => {
           )}
           {transcript && (
             <div className="microphone-result-container">
-              <div className="microphone-result-text">{transcript}</div>
+              <p
+                className="microphone-result-text"
+                value={copyToClipboard.value}
+                onChange={({ target: { value } }) =>
+                  setCopyToClipboard({ value, copied: false })
+                }
+              >
+                {transcript}
+              </p>
             </div>
           )}
         </div>
@@ -63,13 +78,24 @@ const TextDisplay = () => {
                 justifyContent: "space-between",
               }}
             >
-              <button
-                title="Copy Text"
-                className="microphone-copy btn"
-                onClick={handleReset}
+              <CopyToClipboard
+                text={copyToClipboard.value}
+                onCopy={() => setCopyToClipboard({ copied: true })}
               >
-                <MdFileCopy /> Copy
-              </button>
+                {/* <button>Copy to clipboard with button</button> */}
+                <button title="Copy Text" className="microphone-copy btn">
+                  {copyToClipboard === true ? (
+                    <span>
+                      <GiCheckMark /> Copied!
+                    </span>
+                  ) : (
+                    <span>
+                      <MdFileCopy /> Copy
+                    </span>
+                  )}
+                </button>
+              </CopyToClipboard>
+
               <button
                 title="Download as .txt file"
                 className="microphone-download btn"
