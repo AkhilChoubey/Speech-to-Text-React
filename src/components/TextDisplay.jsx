@@ -49,15 +49,18 @@ const TextDisplay = () => {
           )}
           {transcript && (
             <div className="microphone-result-container">
-              <p
+              <div
                 className="microphone-result-text"
                 value={copyToClipboard.value}
-                onChange={({ target: { value } }) =>
-                  setCopyToClipboard({ value, copied: false })
-                }
+                onChange={(e) => {
+                  const updatedValue = e.target.value;
+                  console.log(updatedValue);
+                  console.log(toString(updatedValue));
+                  setCopyToClipboard({ updatedValue, copied: false });
+                }}
               >
                 {transcript}
-              </p>
+              </div>
             </div>
           )}
         </div>
@@ -79,12 +82,17 @@ const TextDisplay = () => {
               }}
             >
               <CopyToClipboard
-                text={copyToClipboard.value}
-                onCopy={() => setCopyToClipboard({ copied: true })}
+                text={transcript}
+                onCopy={() => {
+                  setCopyToClipboard({ copied: true });
+                  setTimeout(() => {
+                    setCopyToClipboard({ copied: false });
+                  }, 2000);
+                }}
               >
                 {/* <button>Copy to clipboard with button</button> */}
                 <button title="Copy Text" className="microphone-copy btn">
-                  {copyToClipboard === true ? (
+                  {copyToClipboard.copied === true ? (
                     <span>
                       <GiCheckMark /> Copied!
                     </span>
