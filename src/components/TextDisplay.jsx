@@ -31,6 +31,17 @@ const TextDisplay = () => {
     resetTranscript();
   };
 
+  const downloadTxtFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob([transcript.toString()], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "SpeechToText.txt";
+    document.body.appendChild(element);
+    element.click();
+  };
+
   return (
     <>
       <div style={{ minWidth: "62%", maxWidth: "62%" }}>
@@ -107,7 +118,7 @@ const TextDisplay = () => {
               <button
                 title="Download as .txt file"
                 className="microphone-download btn"
-                onClick={handleReset}
+                onClick={downloadTxtFile}
               >
                 <IoMdDownload /> Download
               </button>
