@@ -9,12 +9,15 @@ import { MdFileCopy } from "react-icons/md";
 import { BiReset } from "react-icons/bi";
 import { VscDebugRestart } from "react-icons/vsc";
 import { GiCheckMark } from "react-icons/gi";
+import { MdFileDownloadDone } from "react-icons/md";
 
 const TextDisplay = () => {
   const [copyToClipboard, setCopyToClipboard] = useState({
     value: "",
     copied: false,
   });
+
+  const [isDownloaded, setDownloaded] = useState(false);
 
   const commands = [
     {
@@ -40,6 +43,11 @@ const TextDisplay = () => {
     element.download = "SpeechToText.txt";
     document.body.appendChild(element);
     element.click();
+
+    setDownloaded(true);
+    setTimeout(() => {
+      setDownloaded(false);
+    }, 2000);
   };
 
   return (
@@ -88,7 +96,7 @@ const TextDisplay = () => {
             <div
               style={{
                 marginTop: "1%",
-                width: "34.5%",
+                width: "40%",
                 justifyContent: "space-between",
               }}
             >
@@ -120,7 +128,15 @@ const TextDisplay = () => {
                 className="microphone-download btn"
                 onClick={downloadTxtFile}
               >
-                <IoMdDownload /> Download
+                {isDownloaded === true ? (
+                  <span>
+                    <MdFileDownloadDone /> Downloaded
+                  </span>
+                ) : (
+                  <span>
+                    <IoMdDownload /> Download
+                  </span>
+                )}
               </button>
             </div>
           </div>
