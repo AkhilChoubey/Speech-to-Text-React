@@ -52,7 +52,7 @@ const TextDisplay = () => {
 
   return (
     <>
-      <div style={{ minWidth: "62%", maxWidth: "62%" }}>
+      <div className="text-root-container">
         <div className="text-display-container">
           {!transcript && (
             <h1

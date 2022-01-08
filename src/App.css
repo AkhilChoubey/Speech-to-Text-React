@@ -61,6 +61,12 @@
   }
 }
 
+/* ///// Text display component styling /////// */
+
+.text-root-container {
+  min-width: 62%;
+  max-width: 62%;
+}
 .text-display-container {
   background: rgb(230, 241, 244);
   padding: 1%;
@@ -133,8 +139,19 @@
     margin-left: 28%;
     width: 30%;
   }
+
+  .big-micro-btn {
+    margin-bottom: 7%;
+  }
+
   .mute-icon,
   .microphone-root-container p {
-    font-size: 1rem;
+    font-size: 1.7rem;
+  }
+
+  .text-root-container {
+    margin-top: 7%;
+    min-width: 100%;
+    max-width: 100%;
   }
 }

@@ -1,16 +1,17 @@
 import React, { useState, useRef } from "react";
 import { BsMicFill } from "react-icons/bs";
 import { BsMicMuteFill } from "react-icons/bs";
-import commands from "./Commands";
+// import commands from "./Commands";
 
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
+import SpeechRecognition from //  ,{
+//   useSpeechRecognition,
+// }
+"react-speech-recognition";
 
 const Microphone = () => {
   const [checkPlayBtn, setCheckPlayButton] = useState("paused");
 
-  const { transcript, resetTranscript } = useSpeechRecognition({ commands });
+  // const { transcript, resetTranscript } = useSpeechRecognition({ commands });
 
   const microphoneRef = useRef(null);
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -36,11 +37,11 @@ const Microphone = () => {
     }
   };
 
-  const stopHandle = () => {
-    setCheckPlayButton(false);
-    microphoneRef.current.classList.remove("listening");
-    SpeechRecognition.stopListening();
-  };
+  // const stopHandle = () => {
+  //   setCheckPlayButton(false);
+  //   microphoneRef.current.classList.remove("listening");
+  //   SpeechRecognition.stopListening();
+  // };
 
   // const handleReset = () => {
   //   stopHandle();
