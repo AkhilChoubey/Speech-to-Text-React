@@ -1,10 +1,25 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { useThemeSwitcher } from "react-css-theme-switcher";
 const ThemeSwitcher = () => {
+  const { switcher, themes, currentTheme, status } = useThemeSwitcher();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // if (status === "loading") {
+  //   return <div>Loading styles...</div>;
+  // }
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((previous) => {
+      switcher({ theme: previous ? themes.light : themes.dark });
+      return !previous;
+    });
+  };
+
   return (
     <>
       <div>
-        <h1>This is ThemeSwitcher Component.</h1>
+        <h1>This is ThemeSwitcher Component. {currentTheme}</h1>
+        <button onClick={toggleDarkMode}> Dark </button>
       </div>
     </>
   );
