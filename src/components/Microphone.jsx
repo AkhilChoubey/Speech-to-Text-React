@@ -100,14 +100,11 @@ const Microphone = () => {
           )}
         </div>
         {checkPlayBtn === "play" ? (
-          <p style={{ margin: 0, fontSize: "3rem", textAlign: "center" }}>
-            {" "}
-            Listening....
-          </p>
+          <p> Listening....</p>
         ) : (
-          <p style={{ margin: 0, fontSize: "3rem", textAlign: "center" }}>
+          <p>
             Click{" "}
-            <span style={{ fontSize: "2.5rem" }}>
+            <span>
               <BsMicMuteFill className="mute-icon" />
             </span>{" "}
             to Start

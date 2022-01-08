@@ -15,6 +15,16 @@
   width: 28%;
 }
 
+.microphone-root-container p {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.mute-icon {
+  font-size: 2.5rem;
+}
+
 .microphone-icon-container {
   width: 80%;
   height: 75%;
@@ -114,5 +124,17 @@
 @media (max-width: 450px) {
   .root-container {
     display: block;
+  }
+  .microphone-root-container {
+    width: 100%;
+    text-align: center;
+  }
+  .microphone-icon-container {
+    margin-left: 28%;
+    width: 30%;
+  }
+  .mute-icon,
+  .microphone-root-container p {
+    font-size: 1rem;
   }
 }
