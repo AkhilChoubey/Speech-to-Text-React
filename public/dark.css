@@ -45,19 +45,19 @@ body {
 }
 
 .microphone-reset {
-  border: 1px solid rgb(248, 5, 5);
-  color: rgb(248, 8, 8);
+  background-color: rgb(248, 5, 5);
+  color: white;
 }
 
 .microphone-copy {
-  border: 1px solid rgb(5 46 248);
+  background-color: rgb(5 46 248);
 
-  color: rgb(5 46 248);
+  color: white;
 }
 .microphone-download {
-  border: 1px solid rgb(53 191 18);
+  background-color: rgb(53 191 18);
 
-  color: rgb(53 191 18);
+  color: white;
 }
 
 .big-micro-btn {
