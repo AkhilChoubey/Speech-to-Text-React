@@ -1,110 +1,34 @@
-.root-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.microphone-root-container {
-  width: 28%;
-}
-
-.microphone-icon-container {
-  width: 80%;
-  height: 75%;
-  border-radius: 50%;
-  /* background-image: linear-gradient(128deg, #ffffff, #647c88); */
-  padding: 20px;
-  margin-right: 20px;
-  position: relative;
-  cursor: pointer;
+body {
+  background-color: black;
+  background-color: #161b22;
 }
 
 .microphone-icon-container.listening::before {
-  content: "";
-  width: 80%;
-  height: 80%;
   background-color: #5acf8f81;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.4);
-  border-radius: 50%;
-  animation: listening infinite 1.5s;
-  -webkit-animation: listening infinite 1.5s;
-}
-
-@keyframes listening {
-  0% {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1.4);
-  }
 }
 
 .text-display-container {
   background: rgb(50, 52, 53);
-  padding: 1%;
-  border-radius: 12px;
-  width: 96%;
-  min-width: 96%;
+  /* background-color: #161b22; */
   border: 3px dashed rgb(197 218 224);
-  min-height: 100%;
 }
 
-.microphone-result-container {
-  text-align: center;
-  height: 50vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 30px;
-}
 .microphone-result-text {
-  margin-bottom: 30px;
-
-  overflow-y: auto;
-  text-align: justify;
-}
-
-.btn {
-  width: 7rem;
-  height: 3rem;
-  border-radius: 6px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between;
+  color: white;
 }
 
 .microphone-reset {
   border: 1px solid rgb(248, 5, 5);
-  background: none;
   color: rgb(248, 8, 8);
-  margin-top: 1%;
 }
 
 .microphone-copy {
   border: 1px solid rgb(5 46 248);
-  background: none;
+
   color: rgb(5 46 248);
-  margin-right: 2%;
 }
 .microphone-download {
-  width: 10rem;
   border: 1px solid rgb(53 191 18);
-  background: none;
-  color: rgb(53 191 18);
-}
 
-@media (max-width: 450px) {
-  .root-container {
-    display: block;
-  }
+  color: rgb(53 191 18);
 }

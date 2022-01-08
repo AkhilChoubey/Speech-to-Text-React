@@ -1,3 +1,11 @@
+* {
+  transition: 1.2s ease;
+  -webkit-transition: 1.2s ease;
+  -moz-transition: 1.2s ease;
+  -ms-transition: 1.2s ease;
+  -o-transition: 1.2s ease;
+}
+
 .root-container {
   display: flex;
   justify-content: space-around;
