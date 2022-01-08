@@ -8,6 +8,36 @@
   border: 3px dashed rgb(197 218 224);
 }
 
+.microphone-icon-container.listening::before {
+  background-color: #5acf8f81;
+}
+
+.microphone-mute-icon {
+  color: green;
+  background-color: #eeeeee;
+}
+
+.microphone-unmute-icon {
+  color: red;
+  background-color: #eeeeee;
+}
+
+.big-micro-btn {
+  transition: 0ms;
+  -webkit-transition: 0ms;
+  -moz-transition: 0ms;
+  -ms-transition: 0ms;
+  -o-transition: 0ms;
+}
+
+.mute-icon {
+  color: black;
+  transition: 0ms;
+  -webkit-transition: 0ms;
+  -moz-transition: 0ms;
+  -ms-transition: 0ms;
+  -o-transition: 0ms;
+}
 .microphone-result-text {
   color: black;
 }

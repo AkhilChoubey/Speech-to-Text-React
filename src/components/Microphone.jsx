@@ -58,33 +58,37 @@ const Microphone = () => {
         >
           {checkPlayBtn === "play" ? (
             <div
+              className="microphone-mute-icon"
               style={{
                 width: "100%",
                 height: "100%",
-                color: "green",
+
                 textAlign: "center",
                 borderRadius: "50%",
-                backgroundColor: "#eeeeee",
+
                 zIndex: 100000,
               }}
               title="mute"
             >
               <BsMicFill
+                className="big-micro-btn"
                 style={{ width: "80%", height: "80%", marginTop: "8%" }}
               />
             </div>
           ) : (
             <div
+              className="microphone-unmute-icon"
               style={{
                 width: "100%",
                 height: "100%",
-                color: "red",
+
                 textAlign: "center",
                 borderRadius: "50%",
-                backgroundColor: "#eeeeee",
               }}
+              title="unmute"
             >
               <BsMicMuteFill
+                className="big-micro-btn"
                 style={{
                   width: "80%",
                   height: "80%",
@@ -104,7 +108,7 @@ const Microphone = () => {
           <p style={{ margin: 0, fontSize: "3rem", textAlign: "center" }}>
             Click{" "}
             <span style={{ fontSize: "2.5rem" }}>
-              <BsMicMuteFill style={{ transition: "0s" }} />
+              <BsMicMuteFill className="mute-icon" />
             </span>{" "}
             to Start
           </p>
