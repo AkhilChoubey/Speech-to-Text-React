@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import Microphone from "./Microphone";
+// import Microphone from "./Microphone";
 import { useSpeechRecognition } from "react-speech-recognition";
-import { GrPowerReset } from "react-icons/gr";
-import { FaCopy } from "react-icons/fa";
+// import { GrPowerReset } from "react-icons/gr";
+// import { FaCopy } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { MdFileCopy } from "react-icons/md";
-import { BiReset } from "react-icons/bi";
+// import { BiReset } from "react-icons/bi";
 import { VscDebugRestart } from "react-icons/vsc";
 import { GiCheckMark } from "react-icons/gi";
 import { MdFileDownloadDone } from "react-icons/md";

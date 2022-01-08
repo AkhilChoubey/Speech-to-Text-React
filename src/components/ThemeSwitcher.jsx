@@ -3,7 +3,7 @@ import { useThemeSwitcher } from "react-css-theme-switcher";
 import DarkModeToggle from "react-dark-mode-toggle";
 
 const ThemeSwitcher = () => {
-  const { switcher, themes, currentTheme, status } = useThemeSwitcher();
+  const { switcher, themes, currentTheme } = useThemeSwitcher();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // if (status === "loading") {
