@@ -104,7 +104,7 @@ const Microphone = () => {
           <p style={{ margin: 0, fontSize: "3rem", textAlign: "center" }}>
             Click{" "}
             <span style={{ fontSize: "2.5rem" }}>
-              <BsMicMuteFill />
+              <BsMicMuteFill style={{ transition: "0s" }} />
             </span>{" "}
             to Start
           </p>

@@ -7,6 +7,14 @@ body {
   background-color: #5acf8f81;
 }
 
+.microphone-root-container p {
+  color: white;
+}
+
+.mute-icon {
+  color: white;
+}
+
 .text-display-container {
   background: rgb(50, 52, 53);
   /* background-color: #161b22; */

@@ -19,7 +19,7 @@ const ThemeSwitcher = () => {
 
   return (
     <>
-      <div style={{ marginTop: "1%", textAlign: "center" }}>
+      <div style={{ marginTop: "1%", textAlign: "center", height: "4rem" }}>
         {/* <h1>This is ThemeSwitcher Component. {currentTheme}</h1> */}
 
         <DarkModeToggle
@@ -27,7 +27,6 @@ const ThemeSwitcher = () => {
           checked={currentTheme === "dark" ? false : true}
           size={80}
         />
-        {/* <button onClick={toggleDarkMode}> Dark </button> */}
       </div>
     </>
   );
