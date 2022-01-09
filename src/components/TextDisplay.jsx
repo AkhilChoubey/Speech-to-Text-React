@@ -93,52 +93,52 @@ const TextDisplay = () => {
             >
               <VscDebugRestart className="big-micro-btn" />
             </button>
-            <div
+            {/* <div
               style={{
                 marginTop: "1%",
                 width: "40%",
                 justifyContent: "space-between",
               }}
+            > */}
+            <CopyToClipboard
+              text={transcript}
+              onCopy={() => {
+                setCopyToClipboard({ copied: true });
+                setTimeout(() => {
+                  setCopyToClipboard({ copied: false });
+                }, 2000);
+              }}
             >
-              <CopyToClipboard
-                text={transcript}
-                onCopy={() => {
-                  setCopyToClipboard({ copied: true });
-                  setTimeout(() => {
-                    setCopyToClipboard({ copied: false });
-                  }, 2000);
-                }}
-              >
-                {/* <button>Copy to clipboard with button</button> */}
-                <button title="Copy Text" className="microphone-copy btn">
-                  {copyToClipboard.copied === true ? (
-                    <span>
-                      <GiCheckMark className="big-micro-btn" />
-                    </span>
-                  ) : (
-                    <span>
-                      <MdFileCopy className="big-micro-btn" />
-                    </span>
-                  )}
-                </button>
-              </CopyToClipboard>
-
-              <button
-                title="Download as .txt file"
-                className="microphone-download btn"
-                onClick={downloadTxtFile}
-              >
-                {isDownloaded === true ? (
+              {/* <button>Copy to clipboard with button</button> */}
+              <button title="Copy Text" className="microphone-copy btn">
+                {copyToClipboard.copied === true ? (
                   <span>
-                    <MdFileDownloadDone className="big-micro-btn" />
+                    <GiCheckMark className="big-micro-btn" />
                   </span>
                 ) : (
                   <span>
-                    <IoMdDownload className="big-micro-btn" />
+                    <MdFileCopy className="big-micro-btn" />
                   </span>
                 )}
               </button>
-            </div>
+            </CopyToClipboard>
+
+            <button
+              title="Download as .txt file"
+              className="microphone-download btn"
+              onClick={downloadTxtFile}
+            >
+              {isDownloaded === true ? (
+                <span>
+                  <MdFileDownloadDone className="big-micro-btn" />
+                </span>
+              ) : (
+                <span>
+                  <IoMdDownload className="big-micro-btn" />
+                </span>
+              )}
+            </button>
+            {/* </div> */}
           </div>
         )}
       </div>

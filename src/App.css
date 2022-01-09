@@ -95,36 +95,63 @@
 }
 
 .btn {
-  width: auto;
+  /* width: auto;
   height: 3rem;
   border-radius: 6px;
   font-size: 1.2rem;
+  cursor: pointer; */
+
+  margin-top: 0.5%;
+  margin-right: 0.5%;
+  width: auto;
+  height: 3rem;
+  /* width: 2.5rem; */
+  border-radius: 6px;
+  font-size: 1.5rem;
   cursor: pointer;
+  padding-top: 1%;
 }
 
 .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .microphone-reset {
   border: 1px solid rgb(248, 5, 5);
   background: none;
   color: rgb(248, 8, 8);
-  margin-top: 1%;
+  border-radius: 0 0 0 20px;
+  /*margin-top: 1%;
+  */
+  -webkit-border-radius: 0 0 0 20px;
+  -moz-border-radius: 0 0 0 20px;
+  -ms-border-radius: 0 0 0 20px;
+  -o-border-radius: 0 0 0 20px;
 }
 
 .microphone-copy {
   border: 1px solid rgb(5 46 248);
   background: none;
   color: rgb(5 46 248);
-  margin-right: 2%;
+  /*margin-right: 2%;
+  */
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
 .microphone-download {
   width: auto;
   border: 1px solid rgb(53 191 18);
   background: none;
   color: rgb(53 191 18);
+  border-radius: 0 0 20px 0;
+  -webkit-border-radius: 0 0 20px 0;
+  -moz-border-radius: 0 0 20px 0;
+  -ms-border-radius: 0 0 20px 0;
+  -o-border-radius: 0 0 20px 0;
 }
 
 @media (max-width: 450px) {
