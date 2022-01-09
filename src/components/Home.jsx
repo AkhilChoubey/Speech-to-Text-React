@@ -3,6 +3,7 @@ import Microphone from "./Microphone";
 import TextDisplay from "./TextDisplay";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { BsGithub } from "react-icons/bs";
+import { FiGithub } from "react-icons/fi";
 
 const Home = () => {
   return (

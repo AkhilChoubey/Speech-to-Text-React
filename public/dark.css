@@ -67,8 +67,3 @@ body {
   -ms-transition: 0ms;
   -o-transition: 0ms;
 }
-
-.developer-container a {
-  background-color: rgba(110, 118, 129, 0.4);
-  color: white;
-}
