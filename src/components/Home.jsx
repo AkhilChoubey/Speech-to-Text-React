@@ -13,28 +13,20 @@ const Home = () => {
           <Microphone />
           <TextDisplay />
         </div>
-        <div
-          style={{
-            width: "20rem",
-            bottom: "0",
-            position: "absolute",
-            /* padding-top: 0.5%; */
-            textAlign: "end",
-            /* height: 5rem; */
-          }}
-        >
+        <div className="developer-container">
           <a
             type="button"
-            style={{
-              border: "1px solid rgb(5 5 5)",
-              textDecoration: "none",
-              fontSize: "1.5rem",
-              padding: "1.5%",
-              borderRadius: "25px 25px 0 0",
-            }}
+            // style={{
+            //   border: "1px solid rgb(5 5 5)",
+            //   textDecoration: "none",
+            //   fontSize: "1.5rem",
+            //   padding: "1.5%",
+            //   borderRadius: "25px 25px 0 0",
+            // }}
             href="https://github.com/AkhilChoubey"
           >
-            Know the Develoer <BsGithub />
+            Know the Develoer{" "}
+            <BsGithub style={{ fontSize: "1.5rem" }} className="mute-icon" />
           </a>
         </div>
       </div>
