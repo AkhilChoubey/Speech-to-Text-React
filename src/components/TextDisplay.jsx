@@ -91,7 +91,7 @@ const TextDisplay = () => {
               className="microphone-reset btn"
               onClick={handleReset}
             >
-              <VscDebugRestart className="big-micro-btn" /> Reset
+              <VscDebugRestart className="big-micro-btn" />
             </button>
             <div
               style={{
@@ -113,11 +113,11 @@ const TextDisplay = () => {
                 <button title="Copy Text" className="microphone-copy btn">
                   {copyToClipboard.copied === true ? (
                     <span>
-                      <GiCheckMark className="big-micro-btn" /> Copied!
+                      <GiCheckMark className="big-micro-btn" />
                     </span>
                   ) : (
                     <span>
-                      <MdFileCopy className="big-micro-btn" /> Copy
+                      <MdFileCopy className="big-micro-btn" />
                     </span>
                   )}
                 </button>
@@ -130,11 +130,11 @@ const TextDisplay = () => {
               >
                 {isDownloaded === true ? (
                   <span>
-                    <MdFileDownloadDone className="big-micro-btn" /> Downloaded
+                    <MdFileDownloadDone className="big-micro-btn" />
                   </span>
                 ) : (
                   <span>
-                    <IoMdDownload className="big-micro-btn" /> Download
+                    <IoMdDownload className="big-micro-btn" />
                   </span>
                 )}
               </button>

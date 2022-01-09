@@ -95,7 +95,7 @@
 }
 
 .btn {
-  width: 7rem;
+  width: auto;
   height: 3rem;
   border-radius: 6px;
   font-size: 1.2rem;
@@ -121,7 +121,7 @@
   margin-right: 2%;
 }
 .microphone-download {
-  width: 10rem;
+  width: auto;
   border: 1px solid rgb(53 191 18);
   background: none;
   color: rgb(53 191 18);
@@ -153,5 +153,23 @@
     margin-top: 7%;
     min-width: 100%;
     max-width: 100%;
+  }
+
+  .microphone-result-container {
+    text-align: center;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .btn {
+    width: auto;
+  }
+  .microphone-download {
+    width: auto;
   }
 }
